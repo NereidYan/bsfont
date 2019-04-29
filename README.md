@@ -23,6 +23,3 @@
 1. 開啟瀏覽器, 檢視網頁
 # bsfont
 # bsfont
-# bsfont
-# bsfont
-# bsfont
