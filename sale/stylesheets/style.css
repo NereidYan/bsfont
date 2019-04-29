@@ -1,0 +1,621 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  color: #555;
+}
+
+a {
+  color: #009ced;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2a00c3;
+  text-decoration: underline;
+}
+
+p {
+  display: block;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.page-header {
+  height: 88px;
+}
+
+.top-menu {
+  height: 33px;
+  background-color: #555;
+  line-height: 34px;
+  color: white;
+}
+
+.top-menu p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  text-align: center;
+}
+
+.top-block {
+  height: 55px;
+}
+
+.left {
+  width: 250px;
+  height: 55px;
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-block p {
+  font-weight: bold;
+  font-size: 20px;
+  height: 55px;
+  text-align: center;
+  margin: -60px;
+}
+
+.top-block h2 {
+  font-weight: bold;
+  font-size: 20px;
+  height: 55px;
+  text-align: center;
+  margin: -60px;
+  min-width: 0;
+}
+
+.left li {
+  margin: 0px;
+  text-align: left;
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+.left a {
+  display: block;
+  line-height: 38px;
+  color: #3d4143;
+}
+
+.left a:hover {
+  color: #2a00c3;
+  text-decoration: underline;
+}
+
+.right {
+  width: 200px;
+  height: 55px;
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+
+.right li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35px;
+          flex: 0 0 35px;
+  white-space: nowrap;
+}
+
+.right .shopcar {
+  margin-left: 15px;
+}
+
+.index-image {
+  height: 600px;
+  background: url(../images/index-image.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.index-image h2 {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  margin: 80px;
+}
+
+.index-image h2 span {
+  display: block;
+  position: relative;
+  left: 2em;
+}
+
+.new-items {
+  padding: 40px 0;
+}
+
+.new-items p {
+  width: 250px;
+  height: 250px;
+  font-size: 30px;
+  background-color: silver;
+  line-height: 250px;
+}
+
+.new-items ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.new-items li {
+  margin: 10px;
+  text-align: center;
+  -webkit-box-flex: 340px;
+      -ms-flex: 340px;
+          flex: 340px;
+}
+
+.new-items a {
+  font-size: 16px;
+  color: black;
+}
+
+.new-items h1 {
+  text-align: center;
+}
+
+.content-item {
+  height: 350px;
+  background-color: #555555;
+  line-height: 34px;
+  color: white;
+  text-align: center;
+}
+
+.content-item h2 {
+  padding: 30px;
+  font-size: 2rem;
+}
+
+.index-text {
+  padding: 20px 0;
+  height: 300px;
+  background-color: #fafafa;
+}
+
+.index-text h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.search {
+  border: #fafafa;
+  text-align: center;
+}
+
+.search input {
+  width: 500px;
+  height: 28px;
+  background-color: #fafafa;
+  border: #fafafa;
+  padding-left: 40px;
+  border-bottom: silver 1px solid;
+}
+
+.search i {
+  position: relative;
+  left: 35px;
+}
+
+.index-text h3 {
+  text-align: center;
+}
+
+.index-text h3 input {
+  width: 550px;
+  height: 28px;
+  margin-left: 25px;
+  background-color: black;
+  color: white;
+}
+
+.page-footer {
+  height: 30px;
+  background-color: black;
+  line-height: 30px;
+}
+
+.page-footer ul {
+  margin: 0;
+  padding: 0;
+  /*預設放點點或數字 因為不需要所以拿掉*/
+  list-style: none;
+  /*去除預設清單樣式*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*讓ul變成flex容器*/
+  /*容器之第一層子元素即會依預設值由左至右排列*/
+  /*justify-content: flex-end;不需要到最右邊*/
+  /*height: 38px; (main-menu)*/
+  background-color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-footer li {
+  /*width: 20%;*/
+  margin-left: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+  /*為flex子元素設定 寬度很大不要 高度很高不要*/
+}
+
+.page-footer a {
+  display: block;
+  /*a 原本是行內元素 不能指定寬高*/
+  color: white;
+  text-align: center;
+}
+
+.page-footer a:hover {
+  color: #c30000;
+  text-decoration: underline;
+}
+
+.copyright {
+  background-color: silver;
+  text-align: center;
+}
+
+.copyright h5 {
+  margin: 0;
+}
+
+.cart {
+  margin: 50px 0;
+  display: block;
+  height: 600px;
+}
+
+.cart a {
+  margin-left: 130px;
+  color: #818181;
+}
+
+.shop {
+  height: 38px;
+  line-height: 38px;
+}
+
+.shop ul {
+  width: 900px;
+  margin: 30px 0 0 150px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: #818181 1px solid;
+}
+
+.shop li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+}
+
+.shop .first {
+  margin-right: 450px;
+}
+
+.cart img {
+  width: 200px;
+  height: 200px;
+  float: right;
+}
+
+.second {
+  line-height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second2 {
+  padding: 0 0 0 20px;
+  margin-right: 120px;
+}
+
+.shop .second {
+  padding-bottom: 20px;
+  margin: 20px  150px 20px;
+}
+
+.second input {
+  width: 85px;
+}
+
+.second2 input {
+  width: 50px;
+  color: silver;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.second2 input:hover {
+  background-color: #00a6c3ee;
+  color: black;
+}
+
+.second2 h4 {
+  margin-top: auto;
+  white-space: nowrap;
+}
+
+.cart .third {
+  margin-top: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  border-bottom: none;
+}
+
+.third li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.third p {
+  width: 90px;
+  margin-right: -50px;
+}
+
+.third input {
+  margin: 20px 360px 0 55px;
+  height: 20px;
+}
+
+.third div li {
+  width: 400px;
+  margin: 10px 0 20px -20px;
+}
+
+.cart .third-tr {
+  margin-left: 17px;
+}
+
+.cart .third-tr p {
+  margin: 0 0 0 170px;
+}
+
+.third div p {
+  margin: 0 0 0 150px;
+}
+
+.cart .five {
+  float: right;
+  margin: 40px 27px 10px 0;
+  width: 290px;
+  border-bottom: none;
+  border-top: black 1px solid;
+}
+
+.cart .five div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.five li {
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.cart .five p {
+  white-space: nowrap;
+  margin: 10px 0 0 135px;
+}
+
+.cart .six {
+  border-bottom: none;
+}
+
+.cart .six input {
+  margin: 0 0 0 610px;
+  border: none;
+  height: 35px;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+}
+
+.item {
+  margin: 50px 0 0 240px;
+  display: block;
+  height: 900px;
+}
+
+#sleft {
+  float: left;
+}
+
+#sright {
+  float: right;
+}
+
+.item a {
+  margin: 0 auto;
+  color: #818181;
+}
+
+.sfirst {
+  width: 430px;
+  margin: 0;
+  list-style: none;
+}
+
+.sfirst li {
+  margin-top: 20px;
+  margin-left: -40px;
+}
+
+.sfirst img {
+  width: 470px;
+  height: 500px;
+  margin-top: 40px;
+  margin-left: -40px;
+}
+
+.ssecond {
+  margin-top: 62px;
+  margin-right: 250px;
+  list-style: none;
+}
+
+.ssecond li {
+  margin-bottom: 30px;
+}
+
+.item .ssecond select {
+  height: 35px;
+  width: 300px;
+}
+
+.ssecond input {
+  width: 100px;
+}
+
+.ssecond .buy {
+  height: 50px;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  border: none;
+}
+
+.sthird {
+  width: 300px;
+  list-style: none;
+  border-top: 1px solid;
+}
+
+.sfour {
+  list-style: none;
+}
+
+.sfour p {
+  width: 100px;
+  height: 100px;
+  background-color: #818181;
+}
+
+.sfour a {
+  font-size: 18px;
+  color: black;
+}
+
+.sfour h2 {
+  margin: -90px 0 0 110px;
+}
+
+.sfour h4 {
+  margin-left: 110px;
+}
+
+.updown {
+  width: 0px;
+}
+
+.ssix {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ssix li {
+  margin: 0 50px 10px;
+}
+
+.ssix a {
+  color: #818181;
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    width: 820px;
+  }
+  #sright {
+    width: 820px;
+    height: auto;
+    float: left;
+  }
+  .right {
+    text-align: right;
+  }
+  .ssecond {
+    padding: 0;
+  }
+  .sfour {
+    padding: 0;
+  }
+  .sthird {
+    padding: 0;
+  }
+  .cart {
+    width: 820px;
+  }
+  .shop ul {
+    width: 820px;
+  }
+  .shop li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 10%;
+            flex: 0 0 10%;
+  }
+  .second input {
+    width: 50px;
+  }
+  .third input {
+    margin-right: 250px;
+  }
+  .shop .five {
+    float: right;
+    margin-right: -150px;
+  }
+  .shop .five li {
+    margin-left: 40px;
+  }
+  .cart .six input {
+    margin: 0 0 0 520px;
+  }
+  .second2 h4 {
+    margin-right: -55px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

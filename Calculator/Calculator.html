@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Font_K.svg/2000px-Font_K.svg.png"
+        type="image/ico" />
+    <title>計算機</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            color: #6cacc5;
+            font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+            margin: 0;
+            padding: 5em 0 2em;
+            text-align: center;
+        }
+
+        .calculator {
+            font-size: 28px;
+            margin: 0 auto;
+            width: 10em;
+        }
+
+        .viewer {
+            color: #c97874;
+            float: left;
+            line-height: 3em;
+            text-align: right;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 7.5em;
+            height: 3em;
+        }
+
+        button {
+            border: 0;
+            background: rgb(245, 245, 245);
+            color: black;
+            cursor: pointer;
+            float: left;
+            font: inherit;
+            margin: 0.25em;
+            width: 2em;
+            height: 2em;
+            transition: all 0.5s;
+        }
+
+        button:hover {
+            background: #201e40;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Calculator</h1>
+
+    <div id="calculator" class="calculator">
+
+        <button id="clear" class="clear" onclick="clean();">C</button>
+
+        <input id="viewer" class="form-control text-right" type="text" id="input" value="" style="border:none">
+
+        <button class="input-pad">7</button>
+        <button class="input-pad">8</button>
+        <button class="input-pad">9</button>
+        <button data-ops="plus" class="input-pad">+</button>
+
+        <button class="input-pad">4</button>
+        <button class="input-pad">5</button>
+        <button class="input-pad">6</button>
+        <button data-ops="minus" class="input-pad">-</button>
+
+        <button class="input-pad">1</button>
+        <button class="input-pad">2</button>
+        <button class="input-pad">3</button>
+        <button data-ops="times" class="input-pad">*</button>
+
+        <button class="input-pad">0</button>
+        <button class="input-pad">.</button>
+        <button id="equals" class="equals" data-result="" onclick="ans();">=</button>
+        <button data-ops="divided by" class="input-pad">/</button>
+    </div>
+
+
+
+    <script>
+
+        function inputButton() {
+            var input = document.getElementById("viewer");
+            var text = this.innerHTML;
+            input.value += text;
+        }
+
+        function ans() {
+            var input = document.getElementById("viewer");
+            var result = input.value;
+            input.value = eval(result);
+            console.log(result);
+        }
+
+
+        var inputButtons = document.getElementsByClassName("input-pad");
+
+        for (var i = 0; i < inputButtons.length; i++) {
+            inputButtons[i].onclick = inputButton
+        }
+
+        function clean() {
+            var input = document.getElementById("viewer");
+            input.value = "";
+        }
+
+    </script>
+</body>
+
+</html>
