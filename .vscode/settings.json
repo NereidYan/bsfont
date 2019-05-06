@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "appService.defaultWebAppToDeploy": "/subscriptions/0e26d69f-baf6-4ee7-a5af-92f91ff73fbc/resourceGroups/Myworkss/providers/Microsoft.Web/sites/Myworkss",
+    "appService.deploySubpath": ""
 }
